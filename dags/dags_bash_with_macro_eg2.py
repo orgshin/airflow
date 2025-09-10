@@ -8,7 +8,6 @@ with DAG(
     schedule="10 0 * * 6#2",
     start_date=pendulum.datetime(2025, 9, 1, tz="Asia/Seoul"),
     catchup=False,
-    default_view="graph",
 ) as dag:
     # START_DATE: 2주전 월요일, END_DATE: 2주전 토요일
     bash_task_2 = BashOperator(
